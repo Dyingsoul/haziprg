@@ -66,14 +66,4 @@ public class ParagonResult {
 	public int getHoursToDesiredLevel() {
 		return hoursToDesiredLevel;
 	}
-	
-	/*@Override
-	public String toString() {
-		String result = "Exp to next level: " + this.getExpNextLevel()
-				+ "\nHours to next level : " + this.getHoursNextLevel()
-				+ "\nExp to desired level: " + this.getExpToDesiredLevel()
-				+ "\nHours to desired level: " + this.getHoursToDesiredLevel()
-				+ "\nDays to reach level: " + this.getDaysToDesiredLevel();
-		return result;
-	}*/
 }

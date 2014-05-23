@@ -14,7 +14,6 @@ public class XmlLoader {
 	public static NodeList getLevels() throws ParserConfigurationException,
 			SAXException, IOException {
 		
-		//String filepath = "E://Paragoncalc/src/main/resources";
 		InputStream in = XmlLoader.class.getResourceAsStream("/paragonexp.xml");
 		DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbfactory.newDocumentBuilder();

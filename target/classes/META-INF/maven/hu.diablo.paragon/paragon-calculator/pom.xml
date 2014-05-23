@@ -1,31 +1,91 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>hu.diablo.paragon</groupId>
-  <artifactId>paragon-calculator</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>Paragon Calculator</name>
-  <description>Calculating paragon levels</description>
-  <developers>
-    <developer>
-      <id>zalan</id>
-      <name>Vitalis Zalan</name>
-      <email>vitalis.zalan@gmail.com</email>
-      <url>http://zalandroid.hu</url>
-      <organization>Unideb</organization>
-      <organizationUrl>http://www.inf.unideb.hu/</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-    </developer>
-  </developers>
-  <resources>
-     <resource>
-       <directory>E:\Paragoncalc\src\main\resources</directory>
-     </resource>
-   </resources>
-  <!-- <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.11</version>
-</dependency> -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>hu.diablo.paragon</groupId>
+	<artifactId>paragon-calculator</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Paragon Calculator</name>
+	<description>Paragon level calculator for Diablo III: Reaper of Souls game.</description>
+	<developers>
+		<developer>
+			<id>zalan</id>
+			<name>Vitalis Zalan</name>
+			<email>vitalis.zalan@gmail.com</email>
+			<url>http://zalandroid.hu</url>
+			<organization>Unideb</organization>
+			<organizationUrl>http://www.inf.unideb.hu/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>GNU GPLv3</name>
+			<url>http://www.gnu.org/copyleft/gpl.html</url>
+		</license>
+	</licenses>
+	<properties>
+		<project.build.sourceEncoding>Cp1250</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>Cp1250</project.reporting.outputEncoding>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>[3.2]</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.3</version>
+			</plugin>
+		</plugins>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+					<show>private</show>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.4</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.12.1</version>
+				<configuration>
+					<configLocation>${basedir}/config/checkstyle.xml</configLocation>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>
