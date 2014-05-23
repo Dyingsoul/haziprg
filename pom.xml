@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>hu.diablo.paragon</groupId>
+  <artifactId>paragon-calculator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Paragon Calculator</name>
+  <description>Calculating paragon levels</description>
+  <developers>
+    <developer>
+      <id>zalan</id>
+      <name>Vitalis Zalan</name>
+      <email>vitalis.zalan@gmail.com</email>
+      <url>http://zalandroid.hu</url>
+      <organization>Unideb</organization>
+      <organizationUrl>http://www.inf.unideb.hu/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+  <resources>
+     <resource>
+       <directory>E:\Paragoncalc\src\main\resources</directory>
+     </resource>
+   </resources>
+  <!-- <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.11</version>
+</dependency> -->
+</project>
