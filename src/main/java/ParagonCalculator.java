@@ -21,21 +21,14 @@ public class ParagonCalculator {
 		BigInteger expToNextLevel = new BigInteger ("0");
 		NodeList levels = XmlLoader.getLevels();
 		Node nextlevel = levels.item(currentLevel+1);
+		Node currentLevelNode = levels.item(currentLevel);
+		Node desiredLevelNode = levels.item(desiredLevel);
 		
-		expToNextLevel = expToNextLevel.add(new BigInteger (((Element) nextlevel).getAttribute("exp")));
-
+		expToNextLevel = expToNextLevel.add(new BigInteger (((Element) nextlevel).getAttribute("exp")).subtract(new BigInteger (((Element) currentLevelNode).getAttribute("exp"))));
 				
-		for (int i = currentLevel; i < desiredLevel; i++) {
-			Node level = levels.item(i);
-
-			if(level.getNodeType() == Node.ELEMENT_NODE){
-				Element e = (Element)level;
-				
-				sumExp = sumExp.add(new BigInteger(e.getAttribute("exp")));
-			}
-		}
+		sumExp = sumExp.add(new BigInteger (((Element) desiredLevelNode).getAttribute("exp")).subtract(new BigInteger (((Element) currentLevelNode).getAttribute("exp"))));
 		
-		hoursToNextLevel = expToNextLevel.divide(new BigInteger(String.valueOf(expPerHour))).intValue();
+		hoursToNextLevel = expToNextLevel.divide(expPerHourInMillions).intValue();
 		hoursToDesiredLevel = sumExp.divide(expPerHourInMillions).intValue();
 		daysToReachLevel = hoursToDesiredLevel/hoursPlayedPerDay;
 		
