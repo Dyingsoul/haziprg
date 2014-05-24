@@ -8,13 +8,20 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Class for storing the formula for calculations.
  * @author Dyingsoul
- *
  */
 
 public class ParagonCalculator {
+	/**
+	 * Creating new logger.
+	 */
+	 protected static Logger logger = LoggerFactory.getLogger(ParagonCalculator.class);
+	 
 /**
  * The method calculateParagon calculates the amount of experience required to the next level,
  * the amount of hours needed to reach the next level,
@@ -25,9 +32,9 @@ public class ParagonCalculator {
  * @param desiredLevel is the user's desired level.
  * @param hoursPlayedPerDay tells how many hours does the user playing per day.
  * @return the result.
- * @throws ParserConfigurationException
- * @throws SAXException
- * @throws IOException
+ * @throws ParserConfigurationException is the Exception upon ParserConfiguration.
+ * @throws SAXException is the Exception upon SAX.
+ * @throws IOException	is the Exception upon IO.
  */
 	public static ParagonResult calculateParagon(int currentLevel,
 			int expPerHour, int desiredLevel, int hoursPlayedPerDay) throws ParserConfigurationException, SAXException, IOException {
@@ -53,5 +60,5 @@ public class ParagonCalculator {
 		
 		return new ParagonResult(expToNextLevel, hoursToNextLevel, sumExp, hoursToDesiredLevel, daysToReachLevel);
 	}
-
+	
 }

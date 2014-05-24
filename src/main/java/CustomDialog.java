@@ -1,24 +1,31 @@
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Custom Dialog for displaying the result.
  * @author Dyingsoul
- *
  */
 public class CustomDialog extends JDialog implements ActionListener {
+	/**
+	 * Creating new logger.
+	 */
+	protected static Logger logger = LoggerFactory.getLogger(MainFrame.class);
 	
 	/**
 	 * Constructing the Custom Dialog made for displaying the result.
-	 * @param parent is the parent window.
-	 * @param title for setting the title of the Custom Dialog.
-	 * @param result stores the result of calculations made by the ParagonCalculator.
+	 * @param parent The parent window.
+	 * @param title For setting the title of the Custom Dialog.
+	 * @param result Stores the result of calculations made by the ParagonCalculator.
 	 */
 	public CustomDialog(JFrame parent, String title, ParagonResult result) {
 		super(parent, title, true);
@@ -46,6 +53,7 @@ public class CustomDialog extends JDialog implements ActionListener {
 
 	/**
 	 * For disposing the Custom Dialog.
+	 * @param e Action that performs the disposal.
 	 */
 	public void actionPerformed(ActionEvent e) {
 		setVisible(false);

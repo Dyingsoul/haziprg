@@ -8,16 +8,22 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Setting up the main window.
  * @author Dyingsoul
- *
  */
 
 public class MainFrame extends JFrame {
 	/**
+	 * Creating new logger.
+	 */
+	protected static Logger logger = LoggerFactory.getLogger(MainFrame.class);
+	/**
 	 * Main window for the application.
-	 * @param args
+	 * @param args Arguments.
 	 */
 	public static void main(String args[]) {
 		new MainFrame();
@@ -80,8 +86,7 @@ public class MainFrame extends JFrame {
 	}
 	
 	/**
-	 * 
-	 * @return the Main window.
+	 * @return The Main window.
 	 */
 	private JFrame getFrame() {
 		return this;
