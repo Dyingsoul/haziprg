@@ -15,13 +15,17 @@ import javax.swing.JTextField;
  */
 
 public class MainFrame extends JFrame {
+	/**
+	 * Main window for the application.
+	 * @param args
+	 */
 	public static void main(String args[]) {
-		/**
-		 * Main window for the application.
-		 */
 		new MainFrame();
 	}
-
+	
+	/**
+	 * Constructing the main window itself.
+	 */
 	MainFrame() {
 		constructPane();
 		this.setSize(500, 500);
