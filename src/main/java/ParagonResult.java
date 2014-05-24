@@ -1,5 +1,10 @@
 import java.math.BigInteger;
 
+/**
+ * Class for costructing the result.
+ * @author Dyingsoul
+ *
+ */
 public class ParagonResult {
 	private BigInteger expNextLevel;
 	private int hoursNextLevel;
@@ -8,10 +13,11 @@ public class ParagonResult {
 	private int daysToDesiredLevel;
 
 	/**
-	 * @param expNextLevel
-	 * @param hoursNextLevel
-	 * @param expToDesiredLevel
-	 * @param hoursToDesiredLevel
+	 * 
+	 * @param expNextLevel stores the amount of experience required to the next level.
+	 * @param hoursNextLevel stores the amount of hours needed to reach the next level.
+	 * @param expToDesiredLevel stores the amount of experience required to the desired level.
+	 * @param hoursToDesiredLevel stores the amount of hours needed to reach the desired level.
 	 */
 	public ParagonResult(BigInteger expNextLevel, int hoursNextLevel,
 			BigInteger expToDesiredLevel, int hoursToDesiredLevel,
@@ -25,43 +31,35 @@ public class ParagonResult {
 	}
 
 	/**
-	 * @return the daysToDesiredLevel
+	 * @return the days needed tp reach the desired level.
 	 */
 	public int getDaysToDesiredLevel() {
 		return daysToDesiredLevel;
 	}
 
 	/**
-	 * @param daysToDesiredLevel
-	 *            the daysToDesiredLevel to set
-	 */
-	public void setDaysToDesiredLevel(int daysToDesiredLevel) {
-		this.daysToDesiredLevel = daysToDesiredLevel;
-	}
-
-	/**
-	 * @return the expNextLevel
+	 * @return the amount of experience needed to next level.
 	 */
 	public BigInteger getExpNextLevel() {
 		return expNextLevel;
 	}
 
 	/**
-	 * @return the hoursNextLevel
+	 * @return the amount of hours needed to reach the next level.
 	 */
 	public int getHoursNextLevel() {
 		return hoursNextLevel;
 	}
 
 	/**
-	 * @return the expToDesiredLevel
+	 * @return the amount of experience required to the desired level.
 	 */
 	public BigInteger getExpToDesiredLevel() {
 		return expToDesiredLevel;
 	}
 
 	/**
-	 * @return the hoursToDesiredLevel
+	 * @return the amount of hours needed to reach the desired level.
 	 */
 	public int getHoursToDesiredLevel() {
 		return hoursToDesiredLevel;

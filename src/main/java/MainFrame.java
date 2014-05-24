@@ -8,23 +8,31 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+/**
+ * Setting up the main window.
+ * @author Dyingsoul
+ *
+ */
+
 public class MainFrame extends JFrame {
 	public static void main(String args[]) {
-		// Main window of the application.
+		/**
+		 * Main window for the application.
+		 */
 		new MainFrame();
 	}
 
 	MainFrame() {
 		constructPane();
 		this.setSize(500, 500);
-		// pack();
-		// Stop running when hitting red X.
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
-		// Setting the Title.
 		this.setTitle("Paragon Level Calculator");
 	}
-
+	
+	/**
+	 * Constructing the Main window's elements.
+	 */
 	private void constructPane() {
 		Container container = this.getContentPane();
 		container.setLayout(new GridLayout(5, 2));
@@ -44,7 +52,10 @@ public class MainFrame extends JFrame {
 		container.add(new JLabel("Hours of play per day:"));
 		container.add(hoursPlayedPerDay);
 		container.add(calculateButton);
-
+		
+		/**
+		 * Performing the calculations upon pressing the Calculate button.
+		 */
 		calculateButton.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
@@ -63,7 +74,11 @@ public class MainFrame extends JFrame {
 		});
 
 	}
-
+	
+	/**
+	 * 
+	 * @return the Main window.
+	 */
 	private JFrame getFrame() {
 		return this;
 	}

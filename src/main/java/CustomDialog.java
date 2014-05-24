@@ -7,8 +7,19 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * Custom Dialog for displaying the result.
+ * @author Dyingsoul
+ *
+ */
 public class CustomDialog extends JDialog implements ActionListener {
-
+	
+	/**
+	 * Constructing the Custom Dialog made for displaying the result.
+	 * @param parent is the parent window.
+	 * @param title for setting the title of the Custom Dialog.
+	 * @param result stores the result of calculations made by the ParagonCalculator.
+	 */
 	public CustomDialog(JFrame parent, String title, ParagonResult result) {
 		super(parent, title, true);
 
@@ -33,6 +44,9 @@ public class CustomDialog extends JDialog implements ActionListener {
 		setVisible(true);
 	}
 
+	/**
+	 * For disposing the Custom Dialog.
+	 */
 	public void actionPerformed(ActionEvent e) {
 		setVisible(false);
 		dispose();

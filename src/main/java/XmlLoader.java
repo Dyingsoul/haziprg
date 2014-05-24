@@ -9,8 +9,20 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class XmlLoader {
+/**
+ * Class for loading the .xml file.
+ * @author Dyingsoul
+ *
+ */
 
+public class XmlLoader {
+	/**
+	 * Loads the database from paragonexp.xml file.
+	 * @return Returns the List of levels.
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
 	public static NodeList getLevels() throws ParserConfigurationException,
 			SAXException, IOException {
 		
