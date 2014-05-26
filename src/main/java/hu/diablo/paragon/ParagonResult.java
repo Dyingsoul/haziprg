@@ -1,3 +1,4 @@
+package hu.diablo.paragon;
 import java.math.BigInteger;
 
 import org.slf4j.Logger;

@@ -1,3 +1,4 @@
+package hu.diablo.paragon;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Custom Dialog for displaying the result.
+ * <code>CustomDialog</code> is for displaying the result.
  * @author Dyingsoul
  */
 public class CustomDialog extends JDialog implements ActionListener {
@@ -22,10 +23,10 @@ public class CustomDialog extends JDialog implements ActionListener {
 	protected static Logger logger = LoggerFactory.getLogger(MainFrame.class);
 	
 	/**
-	 * Constructing the Custom Dialog made for displaying the result.
-	 * @param parent The parent window.
-	 * @param title For setting the title of the Custom Dialog.
-	 * @param result Stores the result of calculations made by the ParagonCalculator.
+	 * Constructing the <code>CustomDialog</code> made for displaying the result.
+	 * @param parent <code>parent</code> is the parent window.
+	 * @param title <code>title</code> is for setting the title of the Custom Dialog.
+	 * @param result <code>result</code> stores the result of calculations made by the ParagonCalculator.
 	 */
 	public CustomDialog(JFrame parent, String title, ParagonResult result) {
 		super(parent, title, true);
@@ -52,10 +53,11 @@ public class CustomDialog extends JDialog implements ActionListener {
 	}
 
 	/**
-	 * For disposing the Custom Dialog.
-	 * @param e Action that performs the disposal.
+	 * For disposing the <code>CustomDialog</code>.
+	 * @param e Action <code>e</code> that performs the disposal.
 	 */
 	public void actionPerformed(ActionEvent e) {
+		logger.info("OK button clicked, action performed, disposing Custom Dialog.",e);
 		setVisible(false);
 		dispose();
 	}

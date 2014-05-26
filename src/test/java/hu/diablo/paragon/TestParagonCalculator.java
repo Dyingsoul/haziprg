@@ -1,4 +1,7 @@
+package hu.diablo.paragon;
 import static org.junit.Assert.*;
+import hu.diablo.paragon.ParagonCalculator;
+import hu.diablo.paragon.ParagonResult;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -20,7 +23,6 @@ public class TestParagonCalculator  {
 		assertEquals(new BigInteger ("1122000000"), result.getExpToDesiredLevel());
 		assertEquals(112, result.getHoursToDesiredLevel());
 		assertEquals(22, result.getDaysToDesiredLevel());
-		
 		//fail("Not yet implemented");
 	}
 	

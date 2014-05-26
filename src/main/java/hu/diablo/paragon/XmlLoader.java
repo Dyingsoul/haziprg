@@ -1,3 +1,4 @@
+package hu.diablo.paragon;
 import java.io.IOException;
 import java.io.InputStream;
 
