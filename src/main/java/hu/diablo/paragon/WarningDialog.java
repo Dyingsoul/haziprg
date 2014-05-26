@@ -16,30 +16,37 @@ import org.slf4j.LoggerFactory;
  * <code>CustomDialog</code> is for displaying the result.
  * @author Dyingsoul
  */
-public class CustomDialog extends JDialog implements ActionListener {
+public class WarningDialog extends JDialog implements ActionListener {
 	/**
 	 * Creating new logger: <code>Logger</code>.
 	 */
 	protected static Logger logger = LoggerFactory.getLogger(MainFrame.class);
 	
 	/**
-	 * Constructing the <code>CustomDialog</code> made for displaying the result.
+	 * Constructing the <code>WarningDialog</code> made for displaying a warning message if the input is not correct.
 	 * @param parent <code>parent</code> is the parent window.
 	 * @param title <code>title</code> is for setting the title of the Custom Dialog.
-	 * @param result <code>result</code> stores the result of calculations made by the ParagonCalculator.
+	 * @param error <code>error</code> stores the error code.
 	 */
-	public CustomDialog(JFrame parent, String title, ParagonResult result) {
+	public WarningDialog(JFrame parent, String title, int error) {
 		super(parent, title, true);
 
 		if (parent != null) {
 			setLocationRelativeTo(parent);
 		}
 		JPanel messagePane = new JPanel();
-		messagePane.add(new JLabel("Exp to next level: " + (result.getExpNextLevel()).toString()));
-		messagePane.add(new JLabel("Hours to next level: " + Integer.toString(result.getHoursNextLevel())));
-		messagePane.add(new JLabel("Exp to desired level: " + (result.getExpToDesiredLevel()).toString()));
-		messagePane.add(new JLabel("Hours to desired level: " + Integer.toString(result.getHoursToDesiredLevel())));
-		messagePane.add(new JLabel("Days to desired level: " + Integer.toString(result.getDaysToDesiredLevel())));
+		
+		if (error == 1)
+			messagePane.add(new JLabel("Error "+ error + ": One or more of the input fields are empty!"));
+		if (error == 2)
+			messagePane.add(new JLabel("Error "+ error + ": The input must be a number!"));
+		if (error == 3)
+			messagePane.add(new JLabel("Error "+ error + ": One or more of the input fields are not positive number(s)!"));
+		if (error == 4)
+			messagePane.add(new JLabel("Error "+ error + ": The current level is higher than desired level!"));
+		if (error == 5)
+			messagePane.add(new JLabel("Error "+ error + ": The current level or the desired level is out of range (range: 0-1500)!"));
+		
 		
 		getContentPane().add(messagePane);
 		JPanel buttonPane = new JPanel();

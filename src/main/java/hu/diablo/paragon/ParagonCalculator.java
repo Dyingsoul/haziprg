@@ -13,26 +13,26 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Class for storing the formula for calculations.
+ * <code>ParagonCalculator</code> is a class for storing the formula for calculations.
  * @author Dyingsoul
  */
 
 public class ParagonCalculator {
 	/**
-	 * Creating new logger.
+	 * Creating new logger: <code>Logger</code>.
 	 */
 	 protected static Logger logger = LoggerFactory.getLogger(ParagonCalculator.class);
 	 
 /**
- * The method calculateParagon calculates the amount of experience required to the next level,
+ * The method <code>calculateParagon</code> calculates the amount of experience required to the next level,
  * the amount of hours needed to reach the next level,
  * the amount of experience required to the desired level,
  * the amount of hours needed to reach the desired level.
- * @param currentLevel is the user's current level.
- * @param expPerHour is the user's experience gain per hour.
- * @param desiredLevel is the user's desired level.
- * @param hoursPlayedPerDay tells how many hours does the user playing per day.
- * @return the result.
+ * @param currentLevel <code>currentLevel</code>is the user's current level.
+ * @param expPerHour <code>expPerHour</code>is the user's experience gain per hour.
+ * @param desiredLevel <code>desiredLevel</code>is the user's desired level.
+ * @param hoursPlayedPerDay <code>hoursPlayedPerDay</code>tells how many hours does the user playing per day.
+ * @return the result as <code>ParagonResult</code>.
  * @throws ParserConfigurationException is the Exception upon ParserConfiguration.
  * @throws SAXException is the Exception upon SAX.
  * @throws IOException	is the Exception upon IO.

@@ -21,12 +21,12 @@ import org.slf4j.LoggerFactory;
 
 public class XmlLoader {
 	/**
-	 * Creating new logger.
+	 * Creating new logger: <code>Logger</code>.
 	 */
 	protected static Logger logger = LoggerFactory.getLogger(XmlLoader.class);
 	/**
 	 * Loads the database from paragonexp.xml file.
-	 * @return Returns the List of levels.
+	 * @return Returns the List of levels as <code>levels</code>.
 	 * @throws ParserConfigurationException is the Exception upon ParserConfiguration.
 	 * @throws SAXException is the Exception upon SAX.
 	 * @throws IOException	is the Exception upon IO.

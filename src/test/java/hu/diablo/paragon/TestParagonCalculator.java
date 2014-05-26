@@ -16,8 +16,6 @@ public class TestParagonCalculator  {
 	@Test
 	public void testcalculateParagon1() throws ParserConfigurationException, SAXException, IOException {
 		ParagonResult result = ParagonCalculator.calculateParagon(150,10,155,5);
-		//ParagonResult expectedResult = new ParagonResult (new BigInteger ("220320000"),22,new BigInteger ("1122000000"),112,22);
-		//assertTrue(result.equals(expectedResult));
 		assertEquals(new BigInteger ("220320000"), result.getExpNextLevel());
 		assertEquals(22, result.getHoursNextLevel());
 		assertEquals(new BigInteger ("1122000000"), result.getExpToDesiredLevel());
