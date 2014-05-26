@@ -21,7 +21,6 @@ public class TestParagonCalculator  {
 		assertEquals(new BigInteger ("1122000000"), result.getExpToDesiredLevel());
 		assertEquals(112, result.getHoursToDesiredLevel());
 		assertEquals(22, result.getDaysToDesiredLevel());
-		//fail("Not yet implemented");
 	}
 	
 	@Test
@@ -32,8 +31,6 @@ public class TestParagonCalculator  {
 		assertEquals(new BigInteger ("34894200000"), result.getExpToDesiredLevel());
 		assertEquals(3172, result.getHoursToDesiredLevel());
 		assertEquals(264, result.getDaysToDesiredLevel());
-		
-		//fail("Not yet implemented");
 	}
 	
 	@Test
@@ -44,8 +41,16 @@ public class TestParagonCalculator  {
 		assertEquals(new BigInteger ("100747440000"), result.getExpToDesiredLevel());
 		assertEquals(359, result.getHoursToDesiredLevel());
 		assertEquals(51, result.getDaysToDesiredLevel());
-		
-		//fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testcalculateParagon4() throws ParserConfigurationException, SAXException, IOException {
+		ParagonResult result = ParagonCalculator.calculateParagon(0,10,1500,15);
+		assertEquals(new BigInteger ("7200000"), result.getExpNextLevel());
+		assertEquals(0, result.getHoursNextLevel());
+		assertEquals(new BigInteger ("2452009795708"), result.getExpToDesiredLevel());
+		assertEquals(245200, result.getHoursToDesiredLevel());
+		assertEquals(16346, result.getDaysToDesiredLevel());
 	}
 	
 }
